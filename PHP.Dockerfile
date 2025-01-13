@@ -18,8 +18,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Set the working directory
 WORKDIR /app/app_laravel
 
-RUN mkdir -p /app/app_laravel/storage /app/app_laravel/bootstrap/cache /app/app_laravel/database
-RUN chown -R www-data:www-data /app/app_laravel/storage /app/app_laravel/bootstrap/cache
-RUN chmod -R 777 /app/app_laravel/storage /app/app_laravel/bootstrap/cache \
-                 /app/app_laravel/database
+#RUN mkdir -p /app/app_laravel/storage /app/app_laravel/bootstrap/cache /app/app_laravel/database
+#RUN chown -R www-data:www-data /app/app_laravel/storage /app/app_laravel/bootstrap/cache
+#RUN chmod -R 777 /app/app_laravel/storage /app/app_laravel/bootstrap/cache \
+#                 /app/app_laravel/database
 
