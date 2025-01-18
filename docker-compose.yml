@@ -35,9 +35,9 @@ services:
       - "3306:3306"
 
   service_php_nginx:
-    container_name: php_nginx_laravel
+    container_name: container_php_nginx_laravel
     volumes:
-      - ./app/app_laravel:/var/www/html
+      - ./app/app_laravel2:/var/www/html
     build:
       context: ./dockerfile/service_php_nginx
       dockerfile: service_php_nginx.Dockerfile
