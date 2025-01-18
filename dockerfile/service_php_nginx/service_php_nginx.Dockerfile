@@ -6,11 +6,9 @@ RUN apt-get update && apt-get install -y nginx supervisor
 # Create directories for Supervisor
 RUN mkdir -p /var/log/supervisor /etc/supervisor/conf.d
 
-# Copy Nginx configuration
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-
-# Supervisor configuration
+COPY ./default.conf /etc/nginx/conf.d/default.conf
 COPY ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 755 /var/www/html
 # Set working directory

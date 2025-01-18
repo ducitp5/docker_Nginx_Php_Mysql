@@ -39,7 +39,7 @@ services:
     volumes:
       - ./app/app_laravel:/var/www/html
     build:
-      context: .
+      context: ./dockerfile/service_php_nginx
       dockerfile: service_php_nginx.Dockerfile
     ports:
       - "83:80"
